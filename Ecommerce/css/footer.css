@@ -1,0 +1,15 @@
+#footer {
+    padding: 20px 0;
+    border-top: 1px solid rgb(152 152 152);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#footer > span {
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: bold;
+}

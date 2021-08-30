@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/menu.css" />
+  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <title>IA Anime - A propos de nous</title>
+</head>
+
+<body>
+  <!-- Navbar en haut -->
+  <div id="navbar-top">
+    <div id="images">
+      <img onclick="window.location.replace('index.html')" id="logo" src="images/logo.png" />
+      <div id="actions-mobile">
+        <img id="panier-mobile" src="./images/shop.svg" />
+        <img id="menu" src="images/menu.svg" />
+      </div>
+    </div>
+    <div id="menus">
+      <ul id="menu-list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique.html?genre=kodomo">Boutique</a></li>
+        <li><a href="about.html">A propos</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+      <ul id="menu-list">
+        <li>
+          <input id="search-input" placeholder="Rechercher..." type="text" />
+          <div id="search-list">
+            <ul id="search-input-responses">
+              <!-- La liste va se remplir quand on va taper dans l'input -->
+            </ul>
+          </div>
+        </li>
+        <li><img id="panier" src="./images/shop.svg" /></li>
+        <li><a class="button" href="login.html">Se connecter</a></li>
+        <li><a class="button" href="login.html">S'inscrire</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar à droite -->
+  <div id="navbar-right">
+    <h3>Mon panier</h3>
+    <ul>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+      <li class="separateur"></li>
+      <li>Item 1</li>
+    </ul>
+    <div id="total">
+      <span>0 €</span>
+      <button>Payer</button>
+    </div>
+  </div>
+
+  <!-- Contenu de la page -->
+  <div id="content">
+    <div id="parent">
+      <h3>A propos de nous :</h3>
+      <p>
+        L'entreprise a pour nom <strong>IA Anime</strong> et a été fondée le
+        <strong>16 janvier 2020</strong>, l'entreprise est située sur Évry aux
+        27 Avenue Robert, son but est de proposer et d'être émergé dans
+        <strong>l'univers des animées</strong>, l'entreprise est du type
+        Société à responsabilité limitée avec un capitale de 8000 €, les deux
+        associés sont M. Kheloul et M. Mostfa. L'entreprise vise le marché de
+        l’animation japonaise pour les produits diverses tels que les
+        vêtements, les figurines ou même des accessoires en rapport avec le
+        thème.
+      </p>
+
+      <h3>Objectif de l'entreprise :</h3>
+      <p>
+        Les objectifs de l’entreprise sont de
+        <strong>satisfaire nos clients</strong> en répondant à leurs attentes
+        et à leurs besoins. Par la suite, nous nous dirigerons vers un
+        agrandissement de l’entreprise grâce aux biens de l’entreprise
+        récoltés, dans le but de faire évoluer la production et les idées afin
+        de satisfaire les clients, cela amènera à créer la pérennité de
+        l’entreprise.
+      </p>
+
+      <img src="./images/Image2.png" />
+
+      <h3>Notre concept :</h3>
+      <p>
+        Au sein de l’entreprise <strong>IA Anime</strong>, nous avons eu
+        l’idée de proposer aux clients la vente en ligne par un site de vente
+        afin de réduire les déplacements dus à la situation actuelle par
+        rapport à la crise sanitaire, nous proposons différentes catégories de
+        produits que ce soit cosmétiques libraire et même des accessoires tels
+        que les vêtements.Le projet a donc pour objectif de continuer les
+        ventes dues aux fermetures des enseignes.
+      </p>
+
+      <p>
+        L’objectif du site est de proposer le site e-commerce afin de faire du
+        bénéfice, pour répondre à la demande des clients qui permettra de
+        satisfaire la demande des clients et d’éviter les contacts physique
+        par rapport à la situation sanitaire. L’objectif est aussi présent sur
+        la fidélité des clients le site pourra donner le droit aux clients de
+        créer un compte afin de nous prouver leur fidélité.
+      </p>
+    </div>
+    <div id="footer">
+      <span>Copyright IA Anime - 2021</span>
+    </div>
+  </div>
+</body>
+
+<script src="./js/data.js"></script>
+<script src="./js/event.js"></script>
+
+</html>

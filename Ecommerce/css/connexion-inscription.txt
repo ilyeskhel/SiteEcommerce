@@ -1,0 +1,46 @@
+  $rep = "<h1>Login</h1>";
+
+  if($bdd = mysqli_connect('localhost' , 'root' ,'' , 'connexion')){
+
+    if (!empty($_POST['connexion'])) {
+      if (!empty($_POST['mail']) && !empty($_POST['password'])) {
+        $mail = $_POST['id'];
+        $password = $_POST['mdp'];
+        $select = mysqli_query($bdd, "SELECT user, COUNT(*) AS nbu FROM COMPTE WHERE mail = '$mail' AND password = '$password';");
+        $donnee = mysqli_fetch_assoc($select);
+        if ($donnee['nbu'] == 1) {
+          $rep = "<h1>Vous êtes connecté en tant que : " . $donnee['id'] . "</h1>";
+        }
+        else {
+        $rep = "<h1>Une erreur est survenue lors de la saisie du formulaire.</h1>";
+        }
+      }
+      else {
+        $rep = "<h1>Login</h1>";
+      }
+    }
+
+    if (!empty($_POST['inscription'])) {
+      if (!empty($_POST['mail']) && !empty($_POST['mdp']) && !empty($_POST['id']) && !empty($_POST['testpassword'])) {
+        $mail = $_POST['mail'];
+        $password = $_POST['mdp'];
+        $user = $_POST['user'];
+        $testpassword = $_POST['testpassword'];
+        if ($password != $testpassword) {
+          $rep = "<h1>Une erreur est survenue lors de la saisie du formulaire.</h1>";
+        }
+        else {
+          $requete = "INSERT INTO COMPTE VALUES ('$mail','$id','$mdp');";
+          if (mysqli_query($bdd, $requete)) {
+            $rep = "<h1>Votre compte a bien été créé.</h1>";
+          }
+          else {
+            $rep = "<h1>Une erreur est survenue lors de la saisie du formulaire.</h1>";
+          }
+        }
+      }
+    }
+  }
+  else {
+    $rep = "Erreur de connexion a la base de données.";
+  }

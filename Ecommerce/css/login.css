@@ -1,0 +1,153 @@
+#content {
+    transition: all 0.25s linear;
+}
+
+#content {
+    height: calc(100vh - 113.5px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s linear;
+    margin-top: 12.5px;
+}
+
+#parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+}
+
+#content-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#content-parent h3 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+#content-parent p {
+    font-family: sans-serif;
+    margin-top: 20px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+#content-parent > #login {
+    width: 49%;
+}
+
+#content-parent > #register {
+    width: 49%;
+}
+
+#register, #login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register > form,
+#login > form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#register > form > label,
+#login > form > label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#register > form > input,
+#login > form > input {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+#register > form > input:focus,
+#login > form > input:focus,
+#register > form > textarea:focus,
+#login > form > textarea:focus {
+    outline: none;
+    border: 1px solid rgb(141, 141, 141);
+}
+
+#register > form > textarea,
+#login > form > textarea {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+#register > form > button,
+#login > form > button {
+    align-self: flex-end;
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#register > form > button:hover,
+#login > form > button:hover {
+    cursor: pointer;
+    background-color: rgb(138, 138, 138);
+    color: white;
+}
+
+#register > form > button:focus,
+#login > form > button:focus {
+    outline: none;
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+
+#separation {
+    height: 60%;
+    width: 1px;
+    background-color: rgb(167, 167, 167);
+    margin: 20px;
+}
+
+
+@media screen and (max-width: 1110px) {
+    #parent {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #separation {
+        width: 60%;
+        height: 1px;
+        margin-top: 60px;
+    }
+
+    #content-parent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: inherit;
+        padding: 40px;
+    }
+}

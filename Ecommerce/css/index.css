@@ -1,0 +1,142 @@
+#menu-list:first-child > li:first-child {
+    border-bottom: 1px solid black;
+}
+
+#content {
+    height: calc(100vh - 113.5px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s linear;
+    margin-top: 12.5px;
+}
+
+#parent {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: auto;
+}
+
+.news {
+    width: 100%;
+    height: min-content;
+    border-radius: 3px;
+    border: 2px solid gray;
+    position: relative;
+}
+
+.news:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.large {
+    grid-column: 1 / 3;
+}
+
+.news > .date {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.news > .date > span {
+    font-family: sans-serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: 12px;
+    border-bottom-left-radius: 3px;
+    border-bottom: 1px solid rgb(152 152 152);
+    border-left: 1px solid rgb(152 152 152);
+}
+
+.news > .image {
+    height: 80%;
+    width: 100%;
+}
+.news > .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news > .description {
+    padding: 10px;
+}
+.news > .description > span {
+    font-family: sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news > .titre {
+    position: absolute;
+    display: flex;
+    height: 80%;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.news > .titre > .parent-titre {
+    background-color: #ffffffa3;
+    padding: 10px;
+    width: 100%;
+}
+
+.news > .titre > .parent-titre {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    text-shadow: 1px 5px 5px #ababab;
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar-top {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #navbar-left {
+       display: none;
+    }
+    #content {
+        padding: 0;
+        padding-top: 12.5px;
+        height: calc(100vh - 123.5px);
+    }
+    #menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 101px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+    }
+    #menu {
+        display: block;
+        height: 50px;
+    }
+
+    #images {
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #parent {
+        grid-template-columns: 100%;
+        width: 80%;
+    }
+
+    .large, .medium-left, .medium-right {
+        grid-column: 1 / 1;
+    }
+}

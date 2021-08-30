@@ -1,0 +1,52 @@
+#menu-list:first-child > li:nth-child(3) {
+    border-bottom: 1px solid black;
+}
+
+#content {
+    height: calc(100vh - 113.5px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s linear;
+    margin-top: 12.5px;
+}
+
+#parent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-family: sans-serif;
+}
+
+#parent > h3 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+#parent > p {
+    margin-top: 20px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+#parent > img {
+    align-self: center;
+    width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    #parent {
+        width: 100%;
+        padding: 40px;
+    }
+
+    #parent > img {
+        max-width: 100%;
+    }
+
+    #content {
+        height: calc(100vh - 111.5px);
+    }
+}
